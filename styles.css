@@ -1,5 +1,7 @@
-*{font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;}
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
 
 :root {
     --navy: #04364A;
@@ -8,8 +10,7 @@ font-family: 'Roboto', sans-serif;}
     --soft: #DAFFFB;
     --white: #fff;
     --black: rgb(33, 22, 22);
-
-}   
+}
 
 body {
     margin: 0;
@@ -92,10 +93,17 @@ main {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
+    flex-wrap: wrap;
+}
+
+.projecttitle {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200%;
 }
 
 .projectContainer {
-    width: 450px;
+    min-width: 450px;
     height: 600px;
     background-color: var(--white);
     margin: 100px 50px;
@@ -115,6 +123,8 @@ main {
 }
 
 .box {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
     cursor: pointer;
     padding: 30px;
@@ -148,4 +158,33 @@ main {
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-style: italic;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectContainer {
+        margin: 20px 0;
+        width: 80%;
+    }
+
+    .headerLeft,
+    .headerRight {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .navLink {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .box {
+        font-size: 20px;
+        padding: 20px;
+    }
 }
